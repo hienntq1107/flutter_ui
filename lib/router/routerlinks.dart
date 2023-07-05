@@ -12,7 +12,7 @@ class RouterLinks {
   });
 
   static final RouterLinks notFoundOrder = RouterLinks(
-    title: 'Start Ordering',
+    title: 'Start ordering',
     linkRouter: AppRoutes.order,
   );
 

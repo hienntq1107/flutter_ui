@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:study_ui_flutter_tora_2/router/router.dart';
+import 'package:study_ui_flutter_tora_2/styles/colors_style.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +13,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.orange),
+        scaffoldBackgroundColor: ThemeColors.colorBackgroup,
+        colorScheme: ColorScheme.fromSeed(seedColor: ThemeColors.colorMain),
         useMaterial3: true,
       ),
       initialRoute: AppRoutes.start,

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:study_ui_flutter_tora_2/components/buttom_componets.dart';
+import 'package:study_ui_flutter_tora_2/components/button_componets.dart';
 import 'package:study_ui_flutter_tora_2/router/routerlinks.dart';
 
 class SignInForm extends StatelessWidget {

@@ -80,13 +80,11 @@ flutter:
     - family: SF Pro Text
       fonts:
         - asset: fonts/SF-Pro-Text/SF-Pro-Text-Black.otf
-          weight: 400
+        - asset: fonts/SF-Pro-Text/SF-Pro-Text-Regular.otf
     - family: SF Pro Rounded
       fonts:
         - asset: fonts/SF-Pro-Rounded/SF-Pro-Rounded-Ultralight.otf
-          weight: 800
         - asset: fonts/SF-Pro-Rounded/SF-Pro-Rounded-Bold.otf
-          weight: 800
   
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

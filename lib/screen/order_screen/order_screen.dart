@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:study_ui_flutter_tora_2/components/box_componets.dart';
-import 'package:study_ui_flutter_tora_2/components/buttom_componets.dart';
+import 'package:study_ui_flutter_tora_2/components/button_componets.dart';
 import 'package:study_ui_flutter_tora_2/components/text_componets.dart';
 import 'package:study_ui_flutter_tora_2/header/header.dart';
 import 'package:study_ui_flutter_tora_2/router/routerlinks.dart';
@@ -11,7 +11,7 @@ class OrderScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const Header(title: 'Order'),
+      appBar: const Header(title: 'Orders'),
        body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,

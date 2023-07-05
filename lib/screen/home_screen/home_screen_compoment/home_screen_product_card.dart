@@ -1,7 +1,9 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
+import 'package:study_ui_flutter_tora_2/components/text_componets.dart';
 
 import 'package:study_ui_flutter_tora_2/models/product_model.dart';
+import 'package:study_ui_flutter_tora_2/styles/colors_style.dart';
 
 class ProductCard extends StatelessWidget {
   final ProductModel product;
@@ -59,30 +61,23 @@ class ProductCard extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(height: 31.0),
+                const SizedBox(height: 28.0),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 50.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 28.0),
                   child: Text(
                     product.title,
                     textAlign: TextAlign.center,
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                     style: const TextStyle(
-                      color: Colors.black,
+                      color: ThemeColors.colorBlack,
                       fontSize: 22.0,
-                      fontWeight: FontWeight.w600,
+                      fontWeight: FontWeight.w700,
                     ),
                   ),
                 ),
                 const SizedBox(height: 24.0),
-                Text(
-                  product.number,
-                  style: const TextStyle(
-                    fontSize: 17.0,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.grey,
-                  ),
-                )
+                CustomText.productNum(product.number),
               ],
             ),
           )

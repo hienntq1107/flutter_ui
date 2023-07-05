@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:study_ui_flutter_tora_2/components/box_componets.dart';
-import 'package:study_ui_flutter_tora_2/components/buttom_componets.dart';
+import 'package:study_ui_flutter_tora_2/components/button_componets.dart';
 import 'package:study_ui_flutter_tora_2/header/header.dart';
 import 'package:study_ui_flutter_tora_2/models/profile_model.dart';
 import 'package:study_ui_flutter_tora_2/router/routerlinks.dart';
@@ -23,7 +23,6 @@ class ProfileScreenState extends State<ProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const Header(title: 'My Profile'),
-      backgroundColor: const Color(0xffF5F5F8),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
@@ -34,6 +33,7 @@ class ProfileScreenState extends State<ProfileScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 CustomText.titleCard("Information"),
+                BoxSize.sizedBoxH20(),
                 Container(
                   decoration: BoxDecoration(
                     color: Colors.white,
@@ -67,11 +67,11 @@ class ProfileScreenState extends State<ProfileScreen> {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: <Widget>[
-                                  CustomText.nameText(profile.name),
+                                  CustomText.nameProfile(profile.name),
                                   BoxSize.sizedBoxH10(),
-                                  CustomText.emailText(profile.email),
+                                  CustomText.emailProflie(profile.email),
                                   BoxSize.sizedBoxH10(),
-                                  CustomText.descriptionText(
+                                  CustomText.descriptionProfile(
                                       profile.description),
                                 ],
                               ),
@@ -91,6 +91,7 @@ class ProfileScreenState extends State<ProfileScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 CustomText.titleCard("Payment Method"),
+                BoxSize.sizedBoxH20(),
                 Container(
                   decoration: BoxDecoration(
                     color: Colors.white,
@@ -150,11 +151,11 @@ class ProfileScreenState extends State<ProfileScreen> {
                                               ),
                                             ),
                                             BoxSize.sizedBoxW10(),
-                                            CustomText.title(items.title),
+                                            CustomText.titleProfile(items.title),
                                             BoxSize.sizedBoxH20(),
                                           ],
                                         ),
-                                        BoxSize.sizedBoxH8(),
+                                        BoxSize.sizedBoxH10(),
                                         if (!isLastItem)
                                           Container(
                                             alignment: Alignment.center,

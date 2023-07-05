@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:study_ui_flutter_tora_2/screen/home_screen/home_screen_compoment/home_screen_body.dart';
 import 'package:study_ui_flutter_tora_2/screen/profile_screen/profile_screen.dart';
+import 'package:study_ui_flutter_tora_2/styles/colors_style.dart';
 import '../../header/appbar.dart';
 import '../history_screen/history_screen.dart';
 
@@ -67,45 +68,45 @@ class HomeScreenState extends State<HomeScreen> {
                 BottomNavigationBarItem(
                   icon: Icon(
                     Icons.home_outlined,
-                    color: Colors.grey,
+                    color: ThemeColors.colorIconGrey,
                   ),
                   label: 'Home',
                   activeIcon: Icon(
                     Icons.home,
-                    color: Colors.orange,
+                    color: ThemeColors.colorIcon,
                   ),
                 ),
                 BottomNavigationBarItem(
                   icon: Icon(
                     Icons.favorite_border,
-                    color: Colors.grey,
+                    color: ThemeColors.colorIconGrey,
                   ),
                   label: 'Favorite',
                   activeIcon: Icon(
                     Icons.favorite,
-                    color: Colors.orange,
+                    color: ThemeColors.colorIcon,
                   ),
                 ),
                 BottomNavigationBarItem(
                   icon: Icon(
                     Icons.person_outline,
-                    color: Colors.grey,
+                    color: ThemeColors.colorIconGrey,
                   ),
                   label: 'Profile',
                   activeIcon: Icon(
                     Icons.person,
-                    color: Colors.grey,
+                    color: ThemeColors.colorIconGrey,
                   ),
                 ),
                 BottomNavigationBarItem(
                   icon: Icon(
                     Icons.history,
-                    color: Colors.grey,
+                    color: ThemeColors.colorIconGrey,
                   ),
                   label: 'History',
                   activeIcon: Icon(
                     Icons.history,
-                    color: Colors.orange,
+                    color: ThemeColors.colorIcon,
                   ),
                 ),
               ],
@@ -121,7 +122,7 @@ class HomeScreenState extends State<HomeScreen> {
                   },
                 );
               },
-              selectedItemColor: Colors.orange,
+              selectedItemColor: ThemeColors.colorIcon,
             )
           : null,
     );

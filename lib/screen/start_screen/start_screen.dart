@@ -88,18 +88,17 @@ class _StartScreenState extends State<StartScreen> {
                       ),
                       Positioned(
                         child: Container(
-                          height: 10,
+                          height: 20,
                           decoration: BoxDecoration(
                             gradient: const LinearGradient(
                               colors: [
-                                Color(0xffFF460A),
-                                Color.fromARGB(0, 104, 104, 104),
-                                Color(0xffFF460A),
+                                Colors.transparent,
+                                Colors.transparent,
                                 Color(0xffFF460A),
                               ],
                               begin: Alignment.topCenter,
                               end: Alignment.bottomCenter,
-                              stops: [0, 0, 5.0, 10.0],
+                             
                             ),
                             borderRadius: const BorderRadius.only(
                               topLeft: Radius.circular(10),

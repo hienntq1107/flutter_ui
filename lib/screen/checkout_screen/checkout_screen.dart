@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:study_ui_flutter_tora_2/components/box_componets.dart';
-import 'package:study_ui_flutter_tora_2/components/buttom_componets.dart';
+import 'package:study_ui_flutter_tora_2/components/button_componets.dart';
 import 'package:study_ui_flutter_tora_2/header/header.dart';
 import 'package:study_ui_flutter_tora_2/router/routerlinks.dart';
 
@@ -83,7 +83,7 @@ class CheckoutScreenState extends State<CheckoutScreen> {
                                               ),
                                             ),
                                             BoxSize.sizedBoxW10(),
-                                            CustomText.title(items.title),
+                                            CustomText.titleCard(items.title),
                                             BoxSize.sizedBoxH20(),
                                           ],
                                         ),

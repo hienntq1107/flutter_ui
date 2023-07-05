@@ -6,7 +6,6 @@ import 'package:study_ui_flutter_tora_2/screen/home_screen/home_screen_compoment
 
 class ProductDetails extends StatefulWidget {
   final int currentIndex;
-  
 
   const ProductDetails({
     Key? key,
@@ -38,17 +37,34 @@ class ProductDetailsState extends State<ProductDetails> {
 
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(
-      aspectRatio: 0.85,
-      child: PageView.builder(
-        itemCount: categories[widget.currentIndex].productList.length,
-        itemBuilder: (context, index) => GestureDetector(
-          child: ProductCard(
-            product: categories[widget.currentIndex].productList[index],
+    return Row(
+      children: [
+        const SizedBox(
+          width: 26,
+        ),
+        Expanded(
+          child: ListView.builder(
+            scrollDirection: Axis.horizontal,
+            itemCount: categories[widget.currentIndex].productList.length,
+            itemBuilder: (context, index) {
+              final product =
+                  categories[widget.currentIndex].productList[index];
+              return Padding(
+                padding: const EdgeInsets.only(left: 36),
+                child: GestureDetector(
+                  child: Container(
+                    padding: const EdgeInsets.all(16),
+                    child: ProductCard(product: product),
+                  ),
+                ),
+              );
+            },
           ),
         ),
-        controller: _pageController,
-      ),
+        const SizedBox(
+          width: 26,
+        ),
+      ],
     );
   }
 }

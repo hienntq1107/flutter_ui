@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:study_ui_flutter_tora_2/components/text_componets.dart';
 import 'package:study_ui_flutter_tora_2/screen/home_screen/home_screen.dart';
+import 'package:study_ui_flutter_tora_2/styles/colors_style.dart';
 
 class Header extends StatelessWidget implements PreferredSizeWidget {
   const Header({
@@ -16,11 +19,13 @@ class Header extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: const Color(0xffF5F5F8),
+      backgroundColor: ThemeColors.colorBackgroup,
       leading: Align(
         alignment: Alignment.center,
         child: IconButton(
-          icon: const Icon(Icons.arrow_back_ios),
+          icon: SvgPicture.asset(
+          'assets/images/svg/chevron-left.svg'
+        ),
           onPressed: () {
             if (backPress != null) {
               backPress!();
@@ -49,18 +54,9 @@ class Header extends StatelessWidget implements PreferredSizeWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Expanded(
-            child: Container(
-              alignment: Alignment.center,
-              child: Text(
-                title,
-                style: const TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-            ),
+            child: Center(child: CustomText.titleHeader(title)),
           ),
-        const  SizedBox(
+          const SizedBox(
             width: 50,
           ),
         ],

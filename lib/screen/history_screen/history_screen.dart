@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:study_ui_flutter_tora_2/components/box_componets.dart';
+import 'package:study_ui_flutter_tora_2/components/button_componets.dart';
 import 'package:study_ui_flutter_tora_2/components/text_componets.dart';
 import 'package:study_ui_flutter_tora_2/header/header.dart';
+import 'package:study_ui_flutter_tora_2/router/routerlinks.dart';
 
-import '../../components/buttom_componets.dart';
-import '../../router/routerlinks.dart';
 
 class HistoryScreen extends StatelessWidget {
   const HistoryScreen({super.key});
@@ -13,7 +13,6 @@ class HistoryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffF5F5F8),
       appBar: const Header(title: 'History'),
       body: Center(
         child: Column(
