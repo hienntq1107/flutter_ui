@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:study_ui_flutter_tora_2/components/buttom_componets.dart';
+import 'package:study_ui_flutter_tora_2/router/routerlinks.dart';
 
 class SignUpForm extends StatelessWidget {
   const SignUpForm({Key? key}): super(key: key);
@@ -98,25 +100,7 @@ class SignUpForm extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 132,),
-            Container(
-              alignment: Alignment.bottomCenter,
-              child: TextButton(
-                style: TextButton.styleFrom(
-                  backgroundColor: const Color(0xffFF460A),
-                  minimumSize: const Size(314, 70),
-                ),
-                onPressed: () {},
-                child: const Text(
-                  'Sign Up',
-                  style: TextStyle(
-                    fontSize: 14,
-                    color: Colors.white,
-                    fontWeight: FontWeight.w900,
-                  ),
-                ),
-              ),
-            ),
-          ],
+           CustomButton(routerLink: RouterLinks.signUp),],
         ),
       ),
     );

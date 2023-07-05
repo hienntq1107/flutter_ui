@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:study_ui_flutter_tora_2/screen/home_screen/home_screen.dart';
+import 'package:study_ui_flutter_tora_2/components/buttom_componets.dart';
+import 'package:study_ui_flutter_tora_2/router/routerlinks.dart';
 
 class SignInForm extends StatelessWidget {
    const SignInForm({Key? key}) : super(key: key);
@@ -70,30 +71,8 @@ class SignInForm extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 132,),
-            Container(
-              alignment: Alignment.bottomCenter,
-              child: TextButton(
-                style: TextButton.styleFrom(
-                  backgroundColor: const Color(0xffFF460A),
-                  minimumSize: const Size(314, 70),
-                ),
-               onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const HomeScreen()),
-                  );
-                },
-                child: const Text(
-                  'Login',
-                  style: TextStyle(
-                    fontSize: 14,
-                    color: Colors.white,
-                    fontWeight: FontWeight.w900,
-                  ),
-                ),
-              ),
-            ),
-          ],
+            CustomButton(routerLink: RouterLinks.startLogin),
+            ],
         ),
       ),
     );

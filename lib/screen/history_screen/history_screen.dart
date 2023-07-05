@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:study_ui_flutter_tora_2/components/box_componets.dart';
+import 'package:study_ui_flutter_tora_2/components/text_componets.dart';
 import 'package:study_ui_flutter_tora_2/header/header.dart';
-import 'package:study_ui_flutter_tora_2/screen/login_screen/login_page.dart';
 
-class HistoryPage extends StatelessWidget {
-  const HistoryPage({super.key});
+import '../../components/buttom_componets.dart';
+import '../../router/routerlinks.dart';
+
+class HistoryScreen extends StatelessWidget {
+  const HistoryScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,52 +26,19 @@ class HistoryPage extends StatelessWidget {
             Column(
               children: [
                 SizedBox(
-                  child: Image.asset(
-                    'assets/images/history_image.png',
-                    width: 150,
-                    height: 150,
+                  child: SvgPicture.asset(
+                    'assets/images/svg/history_image.svg',
+                    width: 106,
+                    height: 120,
                   ),
                 ),
-                const Text(
-                  'No history yet',
-                  style: TextStyle(
-                    fontSize: 28,
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
-                const Text(
-                  textAlign: TextAlign.center,
-                  'Hit the orange button down \n below to Create an order',
-                  style: TextStyle(
-                    fontSize: 17,
-                    fontWeight: FontWeight.w400,
-                  ),
-                ),
+                CustomText.notFoundText( 'No history yet'),
+                CustomText.notFoundDesText( 'Hit the orange button down below to Create an order'),
               ],
             ),
-            const SizedBox(
-              height: 10,
-            ),
-            Container(
-              alignment: Alignment.bottomCenter,
-              child: TextButton(
-                style: TextButton.styleFrom(
-                  backgroundColor: const Color(0xffFF460A),
-                  minimumSize: const Size(314, 70),
-                ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const LoginPage()),
-                  );
-                },
-                child: const Text(
-                  'Get Started',
-                  style: TextStyle(fontSize: 17, color: Colors.white),
-                ),
-              ),
-            ),
-          ],
+            BoxSize.sizedBoxH10(),
+            CustomButton(routerLink: RouterLinks.notFoundHistory),
+           ],
         ),
       ),
     );

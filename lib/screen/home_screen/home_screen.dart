@@ -26,8 +26,8 @@ class HomeScreenState extends State<HomeScreen> {
         child: const Text('Favorite'),
       ),
     ),
-    const ProfilePage(),
-    const HistoryPage(),
+    const ProfileScreen(),
+    const HistoryScreen(),
   ];
 
   bool hideBottomNavigationBarItems = false;

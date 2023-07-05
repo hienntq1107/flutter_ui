@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:study_ui_flutter_tora_2/router/router.dart';
 
 AppBar homeAppBar(BuildContext context) {
   return AppBar(
@@ -18,7 +19,7 @@ AppBar homeAppBar(BuildContext context) {
           color: Colors.grey,
         ),
         onPressed: () {
-           Navigator.pushNamed(context, "order");
+           Navigator.pushNamed(context, AppRoutes.order);
         },
       ),
     ],

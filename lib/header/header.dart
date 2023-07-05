@@ -17,8 +17,8 @@ class Header extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: const Color(0xffF5F5F8),
-      leading: Padding(
-        padding: const EdgeInsets.only(left: 20),
+      leading: Align(
+        alignment: Alignment.center,
         child: IconButton(
           icon: const Icon(Icons.arrow_back_ios),
           onPressed: () {
